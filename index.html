@@ -167,7 +167,8 @@ footer .container{display:flex;align-items:center;justify-content:space-between;
 .redes{display:flex;gap:14px}
 .redes a{display:block;transition:transform .2s,filter .2s}
 .redes a:hover{transform:translateY(-3px);filter:drop-shadow(0 0 12px rgba(109,77,242,.7))}
-.redes img{width:46px;height:46px}
+.redes img,.redes .site-ic{width:46px;height:46px;display:block}
+.copy{max-width:var(--maxw);margin:34px auto 0;padding:22px clamp(20px,5vw,40px) 0;border-top:1px solid rgba(109,77,242,.22);text-align:center;font-size:.85rem;color:var(--gray-mid)}
 .contato{text-align:right;font-size:1rem;line-height:1.7;color:var(--gray)}
 .contato b{color:var(--white);font-weight:600}
 .contato a:hover{color:var(--p-light)}
@@ -339,31 +340,32 @@ footer .container{display:flex;align-items:center;justify-content:space-between;
 <footer>
   <div class="container">
     <div class="redes">
-      <a href="#" id="rs-fb" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/rs-facebook.png" alt="Facebook"></a>
+      <a href="#" id="rs-site" target="_blank" rel="noopener" aria-label="Site do Grupo Talks"><svg class="site-ic" viewBox="0 0 46 46" aria-hidden="true"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B5BFF"/><stop offset="1" stop-color="#3A22A8"/></linearGradient></defs><circle cx="23" cy="23" r="23" fill="url(#gg)"/><g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="23" cy="23" r="11"/><ellipse cx="23" cy="23" rx="4.6" ry="11"/><path d="M12 23h22M14 17h18M14 29h18"/></g></svg></a>
       <a href="#" id="rs-ig" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/rs-instagram.png" alt="Instagram"></a>
       <a href="#" id="rs-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/rs-whatsapp.png" alt="WhatsApp"></a>
     </div>
     <div class="contato">
-      Contato: <b><a href="tel:+5585997345004">(85) 99734.5004</a></b><br>
+      Contato: <b><a href="tel:+5585998302705">(85) 99830.2705</a></b><br>
       E-mail: <b><a href="mailto:contato@emergencytalks.com.br">contato@emergencytalks.com.br</a></b>
       <img src="img/logo-emergency-topo.png" alt="Emergency Talks">
     </div>
   </div>
+  <p class="copy">© 2027 Grupo Talks. Todos os direitos reservados.</p>
 </footer>
 
 <script>
 /* ===== EDITE AQUI ===== */
 var CONFIG = {
   // Botões de inscrição usam {{lp_checkout_url}} direto no href (a plataforma troca pelo link do checkout).
-  whatsapp:  "https://wa.me/5585997345004",       // botão "Precisa de ajuda?" e ícone do rodapé
-  instagram: "#",
-  facebook:  "#"
+  whatsapp:  "https://wa.me/5585998302705",       // botão "Precisa de ajuda?" e ícone do rodapé
+  instagram: "https://www.instagram.com/emergency.talks/",
+  site:      "https://grupotalks.com.br"
 };
 /* ======================= */
 document.getElementById('ajuda').href = CONFIG.whatsapp;
 document.getElementById('rs-wa').href = CONFIG.whatsapp;
 document.getElementById('rs-ig').href = CONFIG.instagram;
-document.getElementById('rs-fb').href = CONFIG.facebook;
+document.getElementById('rs-site').href = CONFIG.site;
 var hd = document.getElementById('header');
 function onScroll(){ hd.classList.toggle('scrolled', window.scrollY > 30); }
 window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
